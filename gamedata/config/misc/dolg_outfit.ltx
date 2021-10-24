@@ -1,0 +1,168 @@
+;---------------------------------------------------------------------------------------------
+;		ОБЫЧНЫЙ КОСТЮМ ДОЛГА
+;---------------------------------------------------------------------------------------------
+[dolg_outfit]:outfit_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 			= "outfit\dolg_outfit"
+;$prefetch 		= 32
+class			= E_STLK
+cform           = skeleton
+visual          = equipments\dolg_suit
+actor_visual	= actors\dolg\stalker_do_mask.ogf
+
+ef_equipment_type	= 3
+
+inv_name			= dolg_outfit_name
+inv_name_short		= dolg_outfit_name
+description			= dolg_outfit_description
+inv_weight			= 5.0
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 27
+inv_grid_y         = 13
+
+texture_arm = act_arm_dolg
+
+full_icon_name		= npc_icon_dolg_outfit
+
+cost				= 15000
+slot				= 6
+full_scale_icon		= 8,11			;иконка сталкера в костюме в полный рост
+nightvision_sect	= effector_nightvision_bad
+
+immunities_sect			= sect_dolg_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection 				= 0.35
+strike_protection 				= 0.35
+shock_protection 				= 0.35
+wound_protection				= 0.5
+radiation_protection 			= 0.1
+telepatic_protection 			= 0.0
+chemical_burn_protection 		= 0.35
+explosion_protection 			= 0.5
+fire_wound_protection  			= 0.5
+
+bones_koeff_protection = kombez_antigas_damage
+
+[sect_dolg_outfit_immunities]
+burn_immunity				= 0.03			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.01
+shock_immunity				= 0.03
+wound_immunity				= 0.015
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity		= 0.03
+explosion_immunity			= 0.03
+fire_wound_immunity			= 0.01
+;---------------------------------------------------------------------------------------------
+;		НАУЧНЫЙ КОСТЮМ ДОЛГА
+;---------------------------------------------------------------------------------------------
+[dolg_scientific_outfit]:outfit_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 			= "outfit\dolg_scientific_outfit"
+$prefetch 		= 32
+class			= E_STLK
+cform           = skeleton
+visual          = equipments\stalker_dolg_nauchniy_suit
+actor_visual	= actors\dolg\stalker_do_nauchniy.ogf	
+
+ef_equipment_type	= 4
+
+inv_name			= dolg_scientific_outfit_name
+inv_name_short		= dolg_scientific_outfit_name
+description			= dolg_scientific_outfit_description
+inv_weight			= 9.0
+slot				= 6
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 33
+inv_grid_y         = 13
+
+texture_arm = act_arm_dolg_scientific
+
+full_icon_name		= npc_icon_dolg_scientific_outfit
+nightvision_sect	= effector_nightvision_bad
+
+cost				= 25000
+full_scale_icon		= 8,6		;иконка сталкера в костюме в полный рост
+
+immunities_sect			= sect_dolg_scientific_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection 				= 0.7
+strike_protection 				= 0.7
+shock_protection 				= 0.7
+wound_protection				= 0.7
+radiation_protection 			= 0.9
+telepatic_protection 			= 0.0
+chemical_burn_protection 		= 0.7
+explosion_protection 			= 0.45
+fire_wound_protection  			= 0.45
+
+bones_koeff_protection = kombez_kupol_damage
+
+[sect_dolg_scientific_outfit_immunities]
+burn_immunity				= 0.03			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.01
+shock_immunity				= 0.03
+wound_immunity				= 0.015
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity		= 0.03
+explosion_immunity			= 0.03
+fire_wound_immunity			= 0.01
+;============================================DOLG==========================================
+[dolg_black_exoskeleton]:exo_outfit	;Модифицированный экзоскелет dolg
+$spawn							= "outfit\uniq\outfit_exo_m1"
+inv_name						= dolg_black_exoskeleton_name
+inv_name_short					= dolg_black_exoskeleton_name
+description						= dolg_black_exoskeleton_description
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 27
+inv_grid_y         = 31
+
+texture_arm = act_arm_exo_bashmak_d
+
+visual          = equipments\exoskelet
+actor_visual	= actors\dolg\actor_dolg_exo
+full_icon_name		= npc_icon_dolg_exo_outfit
+
+inv_weight			= 17.0
+cost				= 35000
+
+nightvision_sect	= effector_nightvision_bad
+immunities_sect			= sect_dolg_black_exoskeleton_immunities
+
+; MEDIUM RESISTANCE
+burn_protection 				= 0.6
+strike_protection 				= 0.6
+shock_protection 				= -0.35
+wound_protection				= 0.6
+radiation_protection 			= 0.7
+telepatic_protection			= 0.00
+chemical_burn_protection 		= 0.6
+explosion_protection 			= 0.75
+fire_wound_protection  			= 0.75
+
+power_restore_speed				= 0.005
+
+sprint_allowed					= false
+bones_koeff_protection			= exo_helmet_damage
+additional_inventory_weight		= 20
+additional_inventory_weight2	= 20
+ 
+[sect_dolg_black_exoskeleton_immunities]
+; From exo_outfit v.1.1
+burn_immunity				= 0.03
+strike_immunity				= 0.01
+shock_immunity				= 0.03
+wound_immunity				= 0.01
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity			= 0.03
+explosion_immunity			= 0.03
+fire_wound_immunity			= 0.005

@@ -1,0 +1,177 @@
+[wpn_fort]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn                   	= "weapons\fort"
+$npc			 			= on
+$prefetch 					= 8
+scheduled            		= off
+cform                    	= skeleton
+class                    	= WP_PM
+min_radius               	= 5
+max_radius               	= 30
+description					= enc_weapons1_wpn-fort
+
+ef_weapon_type				= 5
+
+holder_range_modifier	= 1.0 
+holder_fov_modifier		= 1.0
+
+cost					 	= 1500
+
+ammo_limit		 			= 120
+ammo_current		 		= 90
+ammo_elapsed		 		= 12
+
+ammo_mag_size		 		= 12
+ammo_class		 			= ammo_9x18_fmj, ammo_9x18_pmm
+
+hand_dependence		 		= 1
+single_handed				= 1
+
+slot 				 		= 1
+animation_slot		 		= 1
+
+inv_name					= wpn-fort
+inv_name_short				= wpn-fort
+inv_weight					= 0.83
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 16
+inv_grid_y         = 38
+
+kill_msg_x			= 104
+kill_msg_y			= 178
+kill_msg_width		= 28
+kill_msg_height		= 21
+
+fire_dispersion_base		= 0.2
+
+cam_relax_speed         	= 10
+cam_dispersion          	= 1.1
+cam_dispersion_inc		= 0.0
+cam_dispertion_frac		= 1.0
+cam_max_angle			= 20.0
+cam_max_angle_horz		= 10.0
+cam_step_angle_horz		= 0.7
+
+fire_dispersion_condition_factor = 5
+misfire_probability 		= 0.003
+misfire_condition_k			= 0.05 
+condition_shot_dec 			= 0.0003
+
+direction                	= 0, 0, 1
+fire_point               	= 0.0, 0.148, 0.157
+
+flame_particles		   		= weapons\generic_weapon03
+smoke_particles		   		= weapons\generic_shoot_00
+rpm_empty_click 	 		= 300
+
+shell_point		 			= 0.05, 0.148, 0.053
+shell_dir		 			= 0.0, 0.0, 0.4
+shell_particles	 			= amik\weapons\9x18\9x18_r_01
+
+PDM_disp_base 			= 0.3
+PDM_disp_vel_factor 		= 0.7
+PDM_disp_accel_factor 		= 0.7
+PDM_crouch	 		= 0.1
+PDM_crouch_no_acc 		= 0.1
+
+hit_power           = 0.35
+hit_impulse		 	= 110
+hit_type 			= fire_wound
+
+fire_distance       = 50 
+bullet_speed		= 300
+rpm                 = 300
+
+use_aim_bullet				= true
+time_to_aim					= 1.0	
+
+silencer_hit_power       	= 0.35
+silencer_hit_impulse	 	= 90
+silencer_fire_distance   	= 100
+silencer_bullet_speed	 	= 220
+
+hud                      	= wpn_fort_hud
+normal                   	= 0, 1, 0
+position                 	= -0.021, -0.10, 0.0
+orientation              	= 0, 0, 0
+
+startup_ammo             	= 90
+visual                   	= weapons\fort\wpn_fort.ogf
+
+light_color		 			= 0.6,0.5,0.3
+light_range		 			= 3.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 			= 0.2
+
+ph_mass			 			= 1
+
+;addons
+scope_status				= 0
+silencer_status				= 2
+grenade_launcher_status		= 0
+
+zoom_enabled				= true
+scope_zoom_factor	    	= 70
+
+;звуки
+snd_draw					= weapons\deagle\de_draw
+snd_holster					= weapons\generic_hide
+snd_shoot					= weapons\fort\fort_shoot
+snd_empty					= weapons\glock17\glock17_dry
+snd_reload					= weapons\fort\fort_reload_full
+snd_close					= weapons\generic_close
+
+
+silencer_name  				= wpn_addon_silencer
+silencer_x 					= 63
+silencer_y 					= -17					
+
+silencer_smoke_particles 	= weapons\generic_shoot_00
+snd_silncer_shot			= weapons\fort\fort_shoot_s
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+[wpn_fort_hud]
+shell_point			        = -0.05,0,-0.5
+fire_point			        = 0,0,-0.3
+fire_bone                	= bolt
+orientation              	= 3,1,0
+position                 	= 0.0,-0.09,0.15
+visual                   	= weapons\fort\wpn_fort_hud.ogf
+
+anim_holster				= pm_holster
+anim_idle					= pm_idle
+anim_empty					= pm_idle_empty
+anim_reload					= fort12_reload_empty
+anim_reload_empty			= fort12_reload_empty
+anim_draw					= pm_draw
+anim_draw_empty				= pm_draw_empty
+anim_shoot					= pm_shoot
+anim_shot_last				= pm_shoot_last
+anim_close					= pm_holster_empty
+anim_idle_aim				= pm_idle
+anim_idle_sprint			= pm_idle_sprint
+anim_idle_moving		    = pm_idle_moving
+anim_idle_sprint_empty		= pm_idle_sprint_empty
+anim_idle_moving_empty		= pm_idle_moving_empty
+
+zoom_offset			= -0.115,0.03,0.0
+zoom_rotate_x		= 0.01
+zoom_rotate_y		= 0.053
+
+[wpn_fort_m1]:wpn_fort	;Ёкспериментальный Fort
+$spawn              			= "weapons\uniq\wpn_fort_m1"
+inv_name						= wpn-fort_m
+inv_name_short					= wpn-fort_m
+description						= enc_weapons1_wpn-fort_m1
+ammo_mag_size		 			= 15
+condition_shot_dec 				= 0.0001
+inv_grid_x         = 16
+inv_grid_y         = 39
