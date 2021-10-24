@@ -1,0 +1,183 @@
+[wpn_beretta]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn                   	= "weapons\beretta"
+$npc			 			= on
+$prefetch 					= 8
+scheduled         		   	= off
+cform             		    = skeleton
+class                    	= WP_PM
+min_radius               	= 0
+max_radius               	= 50
+description					= enc_weapons1_wpn-beretta
+
+ef_weapon_type				= 5
+
+holder_range_modifier	= 1.0
+holder_fov_modifier		= 1.0
+
+cost					 	= 4500
+
+ammo_limit		 			= 120
+ammo_current		 		= 96
+ammo_elapsed		 		= 16
+
+ammo_mag_size		 		= 16
+ammo_class		 			= ammo_9x19_fmj, ammo_9x19_pbp
+
+hand_dependence		 		= 1
+single_handed				= 1							
+
+slot 			 			= 1
+animation_slot				= 1
+
+inv_name					= wpn-beretta
+inv_name_short				= wpn-beretta
+inv_weight					= 1.0
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 20
+inv_grid_y         = 38
+
+kill_msg_x			= 200
+kill_msg_y			= 153
+kill_msg_width		= 37
+kill_msg_height		= 24
+
+fire_dispersion_base		= 0.1
+
+cam_relax_speed         	= 8
+cam_dispersion          	= 3.0
+cam_dispersion_inc		= 0.0
+cam_dispertion_frac		= 1.0
+cam_max_angle			= 20.0
+cam_max_angle_horz		= 10.0
+cam_step_angle_horz		= 0.9
+
+fire_dispersion_condition_factor = 5
+misfire_probability 		= 0.005
+condition_shot_dec 		= 0.00005
+
+hit_power                	= 0.35
+hit_impulse		 	= 125
+hit_type 			= fire_wound	
+
+PDM_disp_base 			= 0.3
+PDM_disp_vel_factor 		= 0.7
+PDM_disp_accel_factor 		= 0.7
+PDM_crouch	 		= 0.1
+PDM_crouch_no_acc 		= 0.1
+
+use_aim_bullet				= true
+time_to_aim					= 1.0	
+
+fire_distance            	= 50
+bullet_speed		 	= 360		
+rpm                      	= 250
+rpm_empty_click 	 	= 250
+
+silencer_hit_power       	= 0.52
+silencer_hit_impulse	 	= 105
+silencer_fire_distance   	= 100
+silencer_bullet_speed	 	= 240
+
+hud                      	= wpn_beretta_hud
+visual                   	= weapons\beretta92fs\wpn_beretta92fs.ogf
+
+normal                   	= 0, 1, 0
+position                 	= -0.021, -0.085, 0.0
+orientation              	= 0, 0, 0
+
+direction           	    = 0, 0, 1
+fire_point               	= 0.0, 0.133, 0.161
+
+flame_particles		   		= weapons\generic_weapon03
+smoke_particles		   		= weapons\generic_shoot_00
+
+shell_point		 			= 0.0, 0.133, 0.047
+shell_dir		 			= 0.0, 0.0, 0.4
+shell_particles	 			= amik\weapons\9x18\9x18_r_01
+
+light_color		 			= 0.6,0.5,0.3
+light_range		 			= 3.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 			= 0.2
+
+ph_mass			 			= 1
+
+scope_status				= 0
+silencer_status				= 2
+grenade_launcher_status		= 0
+
+zoom_enabled				= true
+scope_zoom_factor	    	= 70
+
+snd_draw					= weapons\deagle\de_draw
+snd_holster					= weapons\generic_hide
+snd_shoot					= weapons\beretta\beretta_shoot
+snd_empty					= weapons\glock17\glock17_dry
+snd_reload_partly			= weapons\beretta\beretta_reload
+snd_reload					= weapons\beretta\beretta_reload_full
+;snd_reload_jammed			= weapons\pm\pm_reload_jammed
+
+silencer_name  				= wpn_addon_silencer_9x19
+silencer_x 					= 70
+silencer_y 					= -18
+
+silencer_smoke_particles 	= weapons\generic_shoot_00
+snd_silncer_shot			= weapons\p99\p99_sil_shoot
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+[wpn_beretta_hud]
+shell_point			        = -0.05,0.05,-0.5
+fire_point			        = 0,0,-0.3
+fire_bone                	= bolt
+orientation              	= 3,1,0
+position                 	= 0.0,-0.09,0.0
+visual                   	= weapons\beretta92FS\wpn_beretta92fs_hud.ogf 
+
+anim_holster				= pm_holster
+anim_idle					= pm_idle
+anim_empty					= pm_idle_empty
+anim_reload					= beretta92fs_reload
+anim_reload_empty			= beretta92fs_reload_empty
+;anim_reload_jammed         = reload_jammed
+anim_draw					= pm_draw
+anim_draw_empty				= pm_draw_empty
+anim_shoot					= pm_shoot
+anim_shot_last				= pm_shoot_last
+anim_close					= pm_holster_empty
+anim_idle_aim				= pm_idle
+anim_idle_sprint			= pm_idle_sprint
+anim_idle_moving		    = pm_idle_moving
+anim_idle_sprint_empty		= pm_idle_sprint_empty
+anim_idle_moving_empty		= pm_idle_moving_empty
+
+zoom_offset			= -0.10625,0.0275,0.0
+zoom_rotate_x		= 0.02
+zoom_rotate_y		= 0.0538
+
+[wpn_beretta_m1]:wpn_beretta ;Beretta92 + Магазин на 20пт.
+$spawn                   	= "weapons\beretta_m1"			
+description					= enc_weapons1_wpn-beretta_m1
+ammo_mag_size		 		= 20
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 20
+inv_grid_y         = 39
+
+[wpn_beretta_m2]:wpn_beretta ;Beretta + RPM в 300 в/м.
+$spawn                   	= "weapons\beretta_m2"			
+description					= enc_weapons1_wpn-beretta_m2
+rpm						= 300
+rpm_empty_click 	 	= 300
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 20
+inv_grid_y         = 40
